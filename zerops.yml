@@ -1,0 +1,26 @@
+zerops:
+  - setup: app
+    build:
+      base: nodejs@20
+      buildCommands:
+        - pnpm i
+        - pnpm build
+      deployFiles:
+        - public
+        - node_modules
+        - dist
+        - server.js
+        - package.json
+    run:
+      base: nodejs@20
+      ports:
+        - port: 3000
+          httpSupport: true
+      start: pnpm start
+
+
+  # you can ignore this, it's used
+  # for a version of recipe with
+  # both static and ssr versions
+  - setup: ssrapp
+    extends: app

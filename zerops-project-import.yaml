@@ -1,0 +1,10 @@
+project:
+  name: recipe-react
+  tags:
+    - zerops-recipe
+
+services:
+  - hostname: app
+    type: nodejs@20
+    enableSubdomainAccess: true
+    buildFromGit: https://github.com/zeropsio/recipe-react-nodejs
