@@ -1,42 +1,105 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+body {
+    color: rgb(var(--foreground-rgb));
+    background: #ffffff;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+p {
+    color: #121212;
 }
 
-.card {
-  padding: 2em;
+.deploybutton {
+    background-color: #00b1a3;
+    padding-left: 7.25rem;
+    padding-right: 7.25rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    font-weight: 700;
+    color: #fff;
+    transition: 300ms;
 }
 
-.read-the-docs {
-  color: #888;
+.deploybutton:hover {
+    background-color: #3cbdb2;
+}
+
+.primarybutton {
+    background-color: #131313;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    font-weight: 600;
+    color: #fff;
+    transition: 300ms;
+}
+
+.primarybutton:hover {
+    background-color: #4a4a4a;
+}
+
+.discordbutton {
+    border: #d4d4d4 solid 1px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    font-weight: 600;
+    color: #131313;
+    transition: 300ms;
+}
+
+.discordbutton:hover {
+    background-color: #f9f9f9;
+}
+
+.zeropsbutton {
+    border: #d4d4d4 solid 1px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    font-weight: 600;
+    color: #131313;
+    transition: 300ms;
+}
+.zeropsbutton:hover {
+    background-color: #f9f9f9;
+}
+
+.zerops:hover {
+    color: #666;
+}
+
+.link {
+    color: #121212;
+    font-weight: 600;
+}
+
+.link:hover {
+    color: #222222;
+    text-decoration: underline;
+}
+
+.copybtn {
+    transition: 300ms;
+}
+
+h1 {
+    color: #070707;
 }
