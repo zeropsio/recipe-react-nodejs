@@ -9,8 +9,8 @@ zerops:
         - public
         - node_modules
         - dist
-        - server.js
         - package.json
+        - server.js
     run:
       base: nodejs@20
       ports:
